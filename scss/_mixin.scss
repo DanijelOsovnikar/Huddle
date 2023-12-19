@@ -1,0 +1,29 @@
+@mixin main {
+  * {
+    margin: 0;
+    padding: 0;
+    font-size: $fontSize;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop-width) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width: $desktop-width) {
+    @content;
+  }
+}

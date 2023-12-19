@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(257, 40%, 49%);
+  background-image: url(bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header img {
+  transform: scale(0.6);
+  margin-top: unset;
+  margin-left: unset;
+}
+
+main {
+  width: 100%;
+  height: 80%;
+  display: flex;
+}
+main .sectionImage {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .sectionImage img {
+  transform: scale(0.9);
+}
+main .sectionText {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .sectionText .wrapper {
+  width: 75%;
+  height: 45%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-bottom: 5em;
+}
+main .sectionText .wrapper h1 {
+  font-size: 37.5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: white;
+}
+main .sectionText .wrapper p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: white;
+  line-height: 1.7em;
+  margin-bottom: 1em;
+}
+main .sectionText .wrapper button {
+  padding: 1em 3em;
+  width: 10em;
+  border-radius: 2em;
+  border: 1px solid white;
+  background-color: white;
+  color: hsl(257, 40%, 49%);
+}
+main .sectionText .wrapper button:hover {
+  box-shadow: 1px 1px 7px black;
+  color: white;
+  background-color: hsl(300, 69%, 71%);
+  border: 1px solid hsl(300, 69%, 71%);
+  cursor: pointer;
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+footer img {
+  transform: scale(0.5);
+  border: 1px solid white;
+  padding: 1em;
+  border-radius: 3em;
+}
+footer img:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1065px) {
+  main .sectionImage img {
+    transform: scale(0.65);
+  }
+  main .sectionText .wrapper h1 {
+    font-size: 27px;
+  }
+  main .sectionText .wrapper p {
+    font-size: 12px;
+  }
+  main .sectionText .wrapper button {
+    transform: scale(0.8);
+  }
+}
+@media screen and (max-width: 768px) {
+  main .sectionImage img {
+    transform: scale(0.5);
+  }
+  main .sectionText {
+    justify-content: center;
+  }
+  main .sectionText .wrapper h1 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 600px) {
+  main {
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+  }
+  main .sectionImage {
+    width: 100%;
+    height: 45%;
+    margin: 5em 0 2em 0;
+  }
+  main .sectionImage img {
+    transform: scale(0.5);
+  }
+  main .sectionText {
+    width: 100%;
+    height: 45%;
+    justify-content: center;
+  }
+  main .sectionText .wrapper {
+    align-items: center;
+    text-align: center;
+  }
+  main .sectionText .wrapper h1 {
+    margin-bottom: 1em;
+    font-size: 18px;
+  }
+  main .sectionText .wrapper p {
+    margin-bottom: 1em;
+  }
+  footer {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

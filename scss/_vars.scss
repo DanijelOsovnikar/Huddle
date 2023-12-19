@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+//Typography
+
+$mainHeadingFont: "Poppins", sans-serif;
+$mainBodyFont: "Open Sans", sans-serif;
+$fontSize: 15px;
+
+//Colors
+
+$softMagenta: hsl(300, 69%, 71%);
+$violet: hsl(257, 40%, 49%);
+
+//Devices
+
+$mobile-width: 600px;
+$tablet-width: 768px;
+$laptop-width: 1065px;
+$desktop-width: 2560px;

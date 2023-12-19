@@ -1,0 +1,172 @@
+@import "vars.scss";
+@import "mixin.scss";
+
+@include main;
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: $violet;
+  background-image: url(bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  img {
+    transform: scale(0.6);
+    margin-top: unset;
+    margin-left: unset;
+  }
+}
+main {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  .sectionImage {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      transform: scale(0.9);
+    }
+  }
+  .sectionText {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .wrapper {
+      width: 75%;
+      height: 45%;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      margin-bottom: 5em;
+      h1 {
+        font-size: calc($fontSize * 2.5);
+        font-family: $mainHeadingFont;
+        font-weight: 600;
+        color: white;
+      }
+      p {
+        font-family: $mainBodyFont;
+        font-size: $fontSize;
+        color: white;
+        line-height: 1.7em;
+        margin-bottom: 1em;
+      }
+      button {
+        padding: 1em 3em;
+        width: 10em;
+        border-radius: 2em;
+        border: 1px solid white;
+        background-color: white;
+        color: $violet;
+        &:hover {
+          box-shadow: 1px 1px 7px black;
+          color: white;
+          background-color: $softMagenta;
+          border: 1px solid $softMagenta;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+  img {
+    transform: scale(0.5);
+    border: 1px solid white;
+    padding: 1em;
+    border-radius: 3em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@include laptop {
+  main {
+    .sectionImage {
+      img {
+        transform: scale(0.65);
+      }
+    }
+    .sectionText {
+      .wrapper {
+        h1 {
+          font-size: calc($fontSize * 1.8);
+        }
+        p {
+          font-size: calc($fontSize * 0.8);
+        }
+        button {
+          transform: scale(0.8);
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  main {
+    .sectionImage {
+      img {
+        transform: scale(0.5);
+      }
+    }
+    .sectionText {
+      justify-content: center;
+      .wrapper {
+        h1 {
+          font-size: calc($fontSize * 1.2);
+        }
+      }
+    }
+  }
+}
+@include mobile {
+  main {
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+    .sectionImage {
+      width: 100%;
+      height: 45%;
+      margin: 5em 0 2em 0;
+      img {
+        transform: scale(0.5);
+      }
+    }
+    .sectionText {
+      width: 100%;
+      height: 45%;
+      justify-content: center;
+
+      .wrapper {
+        align-items: center;
+        text-align: center;
+        h1 {
+          margin-bottom: 1em;
+          font-size: calc($fontSize * 1.2);
+        }
+        p {
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+  footer {
+    justify-content: center;
+  }
+}
